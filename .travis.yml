@@ -7,14 +7,13 @@ script:
   - python setup.py test
 deploy:
   provider: pypi
-  user: phillbaker
+  server: https://test.pypi.org/legacy/
+  user: bradleyb
   password:
-    secure: mVdcld2aKKJQuva8VnHYaBllFOMASZOKRQa81UymwbWcjVy+88lQ0FxEk3ntCcfXkOP8QJogilbh65Y/H4YwNpq3XnG7XQXsfJARL4CU4z3RKUnFq3bLdETk4UosRj7m7lKnKr1OOwYf1NXRki252gPAqM8l0bp3D3GZW3bZnJEFavOc46gQbIbun0tkX40RxAT2luSS1nmRMYk7xZBroFamunJLywt1VKGkFfX48UwPRDm4UFJjGg/6lYDsbC88C2+hSPIStUKHjulZQsWGLGGBLFxoDFo8MSRmfHLY7siWLAnb5H2nej/tLAeN3U1ilVHF8cI1KTKVXOTSsm9fYBhEOl9wxLkgo8h9KWec40FM6L2xbj6axgHU00ZCcdbGlLyH7a64ftnOii9C3CQYs6WhKAYtU9zjl86NhSuhvHqSX2qhom4CE12lOV+NKLLIws9mzVFeh3L+Qz3aOhSmgPraHAc4ug5lFzigMgKnwRhwidWOSUfzwMSirpNiZ8XFVBcl5JsBM3xbQ4NdTnndSbphGocjIYMkeyNWZs+ITDMq3RXaJeG31ZIFYHBa6bQLxOWFSuxehwCHTbx6k5ipTeO1MYTs/RQRZKvR+NFbV0a9CU7/fYeo7suWhb/UIW9c6aMaLOEnB8Xs/paXbY7p7eT/8PCdrdUrU2a8aWbhYuM=
+    secure: "RZ33roxL9T150NZuMUlfwNgSLP139dIvtfS0iFHUkz6Bab6aIxBPqC3ZdtArN/HZ9ikEKmCXDub9SQOzgTZp9ZuWzAXMEmah01rAmKwiRP0MJMDEbkRA5Va1dyzzipJgExDGqvmYAWVNBh2vJ3sitPZB3sRqsm54vrC6gbcNLGWDxXVcfglrINuS2TzgGr4MMtnKg7f3X6oOi2YiVHicslc8tU6ygQMhZOr01qVcRmRUHpct2Fd5EvtCKRtHktgSrCH0SNdv78mIEYGfpRk9J6BnhGX8mWX0WVvRk83qkEXdfvLKF6MUMQWT8QbiexSHbkwBnm+2mzS5ahv+YG3+6z4ntoxr/5BIm8oCoA2EHCBCDfEMcJaqqEUosegsWZUV5IA9ykIULy6V+6ZZ3qiDHABiC4U5tE+KZ5O5Xv6eC2XQjXcGmJ2m48LvNiRYZrKyKrS5SMP303jZsqqDvQS4H1bMBYkxTGlOh4KhJUi8eg/yroLwH6zG0A3Ymhs9D+AhqLg8f/Vnhb7whf0JYT51EpzuGUcn5CyLgvL3rH7AKecR3MI1Q8LzHRScORs4UfiO1OvY/fr5DfcrYxxezQyzx2sTR92c+fsikecNAS2zzt8pBQHt1UQbSbKJVIvuLs9mYy6HHbui9Ydm5unuiPowMvL+kdZhAu4CMx2LgZfwehA="
   skip_cleanup: true
   distributions: "sdist bdist_wheel"
+  skip_existing: true
   on:
     branch: master
     tags: true
-    python:
-      - "2.7"
-      - "3.5"
